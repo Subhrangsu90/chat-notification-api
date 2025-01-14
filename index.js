@@ -15,14 +15,12 @@ const serviceAccount = JSON.parse(
 	fs.readFileSync(path.resolve(__dirname, serviceAccountPath), "utf8")
 );
 
-// Initialize Firebase Admin SDK
 admin.initializeApp({
 	credential: admin.credential.cert(serviceAccount),
 });
 
 const db = admin.firestore();
 
-// Firestore Trigger Simulation
 db.collection("chat").onSnapshot(async (snapshot) => {
 	snapshot.docChanges().forEach(async (change) => {
 		if (change.type === "added") {
