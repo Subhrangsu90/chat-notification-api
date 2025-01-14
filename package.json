@@ -8,7 +8,7 @@
 		"start": "node index.js"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Subhrangsu",
 	"license": "ISC",
 	"description": "",
 	"dependencies": {
