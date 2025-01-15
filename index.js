@@ -31,6 +31,7 @@ db.collection("chat").onSnapshot(async (snapshot) => {
 				notification: {
 					title: `${message.username} says:`,
 					body: message.text,
+					clickAction: "FLUTTER_NOTIFICATION_CLICK",
 				},
 				topic: "chat",
 			};
